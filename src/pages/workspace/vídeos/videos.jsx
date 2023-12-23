@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Videos() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("members")
-      .then(res => res.json())
-      .then(data => {
-        setData(data.members || []);
-        console.log(data);
-      })
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/members');
+        const membersArray = response.data.members || [];
+        setData(membersArray);
+        console.log(membersArray);
+      } catch (error) {
+        console.error('Erro ao buscar dados:', error.message);
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
     <div>
-      <h1>Membros:</h1>
-      <ul>
-        {data.map((member, index) => (
-          <li key={index}>{member}</li>
-        ))}
-      </ul>
-      <button >Baixar Imagem</button>
+      {/* Renderizar membros como necessário */}
+      {data.map((member, index) => (
+        <div key={index}>{member}</div>
+      ))}
+
+      <button>Baixar Imagem</button>
     </div>
   );
 }
