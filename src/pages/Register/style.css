@@ -1,0 +1,230 @@
+.container {
+  
+    width: 100vw;
+    height: 90vh ;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 100vh;
+      height: 100vh ;
+    }
+  }
+  
+  .conntainerbox {
+  
+    width: 518px;
+    height: 610px;
+    flex-shrink: 0;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.25);
+  
+    z-index: 2; 
+    position: absolute;
+  }
+  
+  
+  
+  .buttonC {
+    margin-top: 40%;
+    display: flex;
+    width: 430px;
+    height: 50px;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--Branco-Default, #FFF);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 173.333% */
+    letter-spacing: 0.46px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background: var(--Azul-Default, #7b53d8);
+    outline: none;
+    border: 1px solid #7b53d8;
+    transition: background 1s ease;
+    text-decoration: none;
+  }
+  
+  .button:hover {
+    background: var(--Azul-Default, #5c3fa1);
+    border: 1px solid #5c3fa1;
+  }
+  
+  .inputContainer {
+  
+    width: 10vh;
+    height: 65px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+    outline: none;
+  }
+  
+  .label {
+  
+    display: flex;
+    color: var(--Preto-preto, #ffffff);
+    font-family: Public Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: auto;
+    padding-left: 10%;
+  }
+  
+  .input {
+  
+    border: none;
+    border-bottom: 1px solid #cacaca;
+    width: 425px;
+    height: 50px;
+    transition: border-bottom 1s ease;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+  }
+  
+  .input:hover {
+    border-bottom: 1px solid #424242;
+  }
+  
+  input:focus {
+    border-bottom: 1px solid #000; 
+    outline: none; 
+  }
+  
+  .containerform{ 
+  
+    display: flex;
+    height: 70%;
+    width: 80%;
+    margin: 10%; 
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 90%;
+  }
+ 
+  
+  .logo {
+    margin-top:7vh;
+    height: 50px;
+    
+  }
+  
+  .forma01 {
+    position: absolute;
+    z-index: 1; 
+    height: 500px;
+    margin-bottom: 500px;
+    margin-left: 700px; 
+    transform-origin: 0 100%;
+  }
+  
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .forma01 {
+      animation: App-logo-spin infinite 700s linear;
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .forma02 {
+      animation: App-logo-spin infinite 700s linear;
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .forma03 {
+      animation: App-logo-spin infinite 700s linear;
+    }
+  }
+  
+  .forma02{
+    position: absolute;
+    z-index: 1; 
+    height: 200px;
+    margin-bottom:-500px;
+    margin-left: -800px; 
+    transform-origin: 0 0%;
+    
+  }
+  
+  .forma03{
+    position: absolute;
+    z-index: 1; 
+    height: 300px;
+    margin-bottom:900px;
+    margin-right: 300px; 
+    transform-origin: 0 -150%;
+    
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    gap: 10px;
+    flex-direction: row;
+  }
+  
+ 
+  .cadastro2 {
+
+    color: #7b53d8;
+    justify-content: center;
+    justify-items: center;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    transition: color 1s ease;
+    text-decoration: none;
+  }
+  
+  .cadastro2:hover {
+    color: #553997;
+  }
+  
+  .naotem2 {
+    margin-top: 15px;
+    text-decoration: none;
+    color: #cacaca;
+  }
+  
