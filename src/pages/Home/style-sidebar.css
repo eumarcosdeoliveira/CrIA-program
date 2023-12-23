@@ -1,0 +1,85 @@
+.sidebar {
+    background-color: #F1F2F7;
+    width: 250px;
+    height: 100%;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    z-index: 2;
+    
+    
+}
+
+.sidebar ul {
+    margin-top: 10vh ;
+
+}
+
+.sidebar img {
+    margin-top: 25px;
+    height:30px;
+}
+
+.Menu {
+    display: flex;
+    align-items: start;
+    padding: 23px;
+    margin-top: 5%;
+    border-radius: 30px;
+    flex-direction: column;
+  }
+  
+  .Menu button {
+    display: flex;
+    align-items: center;
+    background-color: #707fdd00;
+    color: #adadad;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease;
+    padding: 20px 20px;
+    width: 200px;
+    height: 42px;
+    margin-bottom: 20px;
+  
+  }
+  
+
+  
+  button:hover {
+    background-color: #707fdd18;
+    color: #7b53d8;
+  }
+  
+  .Menu span {
+    color: #adadad;
+    padding: 20px 20px;
+    font-size: 14px;
+  }
+  
+  .Sair {
+    display: flex;
+    align-items: center;
+    background-color: #707fdd00;
+    color: #adadad;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.5s ease;
+    padding: 20px 20px;
+    width: 200px;
+    height: 42px;
+    margin-top: 400px;
+    
+  }
+
+  .Sair:hover {
+    background-color: #dd707018;
+    color: #d85353;
+  }
