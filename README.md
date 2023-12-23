@@ -69,6 +69,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-### Dependências:
+### Dependências React:
 
 ### `npm install axios`
+
+### `npm install axios cheerio`
+
+### `npm install http-proxy-middleware`
+
+### Dependências Python:
+
+### `pip install requests`
+
+### `pip install beautifulsoup4`
+
+### `pip install tqdm4`
+
+### `pip install Pillow`
+
+### `pip install opencv-python`
+
+### `pip install flaskda`
+
+### `pip install Flask-CORS`

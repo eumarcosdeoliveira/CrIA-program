@@ -1,20 +1,28 @@
-import "./style-videos.css"
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react';
 
-function Videos () {
-    const handleDownload = () => {
-        const imageUrl = 'https://podacochar.com.br/wp-content/uploads/2023/12/congresso-1536x947.jpg';
-        const link = document.createElement('a');
-        link.href = imageUrl;
-        link.download = 'image.jpg';
-        link.click();
-      };
-  
-    return (
-        <div>
-        <button onClick={handleDownload}>Baixar Imagem</button>
-      </div>
-    );
-  }
+function Videos() {
+  const [data, setData] = useState([]);
 
-export default Videos
+  useEffect(() => {
+    fetch("members")
+      .then(res => res.json())
+      .then(data => {
+        setData(data.members || []);
+        console.log(data);
+      })
+  }, []);
+
+  return (
+    <div>
+      <h1>Membros:</h1>
+      <ul>
+        {data.map((member, index) => (
+          <li key={index}>{member}</li>
+        ))}
+      </ul>
+      <button >Baixar Imagem</button>
+    </div>
+  );
+}
+
+export default Videos;
