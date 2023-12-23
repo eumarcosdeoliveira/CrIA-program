@@ -3,14 +3,17 @@ import axios from 'axios';
 
 function Videos() {
   const [data, setData] = useState([]);
+  const [imageSrc, setImageSrc] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/members');
-        const membersArray = response.data.members || [];
-        setData(membersArray);
-        console.log(membersArray);
+
+        // Buscar imagem
+        const responseImage = await axios.get('http://localhost:5000/images', { responseType: 'arraybuffer' });
+        const imageBlob = new Blob([responseImage.data], { type: 'image/png' });
+        const imageUrl = URL.createObjectURL(imageBlob);
+        setImageSrc(imageUrl);
       } catch (error) {
         console.error('Erro ao buscar dados:', error.message);
       }
@@ -19,14 +22,27 @@ function Videos() {
     fetchData();
   }, []);
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = imageSrc;
+    link.download = 'imagem.png';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div>
-      {/* Renderizar membros como necessário */}
+      {/* Renderizar membros */}
       {data.map((member, index) => (
         <div key={index}>{member}</div>
       ))}
 
-      <button>Baixar Imagem</button>
+      {/* Exibir imagem */}
+      <img src={imageSrc} alt="Imagem" />
+
+      {/* Botão para baixar imagem */}
+      <button onClick={handleDownload}>Baixar Imagem</button>
     </div>
   );
 }
